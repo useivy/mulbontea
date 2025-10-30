@@ -19,6 +19,6 @@ jmp $
 %include "print.asm"
 
 
-MSG_FIRST:    db `\r\nThe device is booted\r\n", 0
+MSG_FIRST:    db `\r\nThe device is booted\r\n`, 0
 times 510-($-$$) db 0
 dw 0xAA55
