@@ -4,11 +4,15 @@
 mov bx, MSG_FIRST
 call bios_print
 
+mov bx, 0xF0F0
+call bios_print_hex
+
 jmp $
 
 %include "print.asm"
-
+%include "print_hex.asm"
 
 MSG_FIRST:    db `\r\nThe device is booted\r\n`, 0
+
 times 510-($-$$) db 0
 dw 0xAA55
