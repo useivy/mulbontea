@@ -4,9 +4,6 @@
 mov bx, MSG_FIRST
 call bios_print
 
-mov bx, 0xF0F0
-call bios_print_hex
-
 jmp $
 
 %include "print.asm"
