@@ -1,5 +1,6 @@
 [bits 16]
 
+; PRINT BIOS
 ; ax: displayed thing
 ; bx: used by interrupt, characters
 
