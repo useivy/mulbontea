@@ -64,11 +64,11 @@ times 512 - ($ - pm) db 0
 
 lm:
 
-call kernel_start
+jmp kernel_start
 
 ; anything here should never be executed, maybe I will add something here if it returns (err msg)
 
-jmp $
+call kernel_start
 
 kernel_start:           equ 0x8200      ; some people use 0x10000 to get a good looking address, I use 0x8200 because its exactly 1MB
 

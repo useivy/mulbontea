@@ -2,11 +2,12 @@
 ; apparently a linker can do it, but to use it I have to sadly no longer use binary output, I have to use ELF
 
 [bits 64]
-extern main
+[extern kmain]
 
-section .text           ; for ELF
-global _start           ; also
+global _start           ; for ELF
+section .startup           ; also
 
 _start:
-  call main
+  jmp $
+  call kmain
   jmp $

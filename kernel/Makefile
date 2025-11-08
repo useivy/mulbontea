@@ -24,7 +24,7 @@ kernel.elf: ${OBJ}
 %.o: %.asm
 	${ASM} $< ${ASM_FLAGS} -o $@
 	
-%.o: %.c
+%.o: %.cpp
 	${CPPC} ${CPPC_FLAGS} ${INC} -o $@ $^
 	
 clear:
