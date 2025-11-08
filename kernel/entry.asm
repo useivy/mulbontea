@@ -8,6 +8,5 @@ global _start           ; for ELF
 section .startup           ; also
 
 _start:
-  jmp $
   call kmain
   jmp $
